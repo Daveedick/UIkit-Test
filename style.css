@@ -1,0 +1,128 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #2D2727, #4D455D, #E9A6A6, #D27685, #7D0633);
+}
+
+#hero .uk-section {
+  position: relative;
+}
+
+#hero .uk-section::before,
+#hero .uk-section::after {
+  content: '';
+  position: absolute;
+  bottom: -8%;
+  left: 10%;
+  width: 150px;
+  height: 150px;
+  background: #FFF8F3;
+  border: 2px solid #2D2727;
+  border-radius: 50%;
+  animation: leftBubble 4s linear infinite;
+}
+
+#hero .uk-section::after {
+  top: -11%;
+  right: -4%;
+  left: unset;
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(45deg, #2D2727, #4D455D);
+  border: 1px solid #FFF8F3;
+  animation: rightBubble 6s linear infinite;
+}
+
+@keyframes leftBubble {
+  50% {
+    bottom: -5%;
+    left: 12%;
+    width: 140px;
+    height: 140px;
+  }
+}
+
+@keyframes rightBubble {
+  50% {
+    top: -10%;
+    right: -3%;
+    width: 190px;
+    height: 190px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#hero .uk-section {
+  background: linear-gradient(-135deg, #2D2727, #4D455D, #E9A6A6, #D27685, #7D0633);
+  border: 1px solid #FFF8F3;
+}
+
+#hero .uk-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#hero h1 {
+  color: #FFF8F3;
+}
+
+#hero .content {
+  display: flex;
+  gap: 40px;
+}
+
+#hero .custom {
+  display: flex;
+  min-height: 200px;
+  max-width: 50%;
+  align-self: end;
+  padding-bottom: 15px;
+  overflow-x: scroll;
+  gap: 20px;
+}
+
+#hero .custom::-webkit-scrollbar {
+  height: 20px;
+  border-radius: 5px;
+}
+
+#hero .custom::-webkit-scrollbar-track {
+  background: linear-gradient(45deg, #2D2727, #4D455D);
+  border: 1px solid #FFF8F3;
+  border-radius: 5px;
+}
+
+#hero .custom::-webkit-scrollbar-thumb {
+  height: 8px;
+  width: 20px;
+  background: linear-gradient(45deg, #2D2727, #4D455D);
+  border: 1px solid #FFF8F3;
+  border-radius: 5px;
+  transition: background .2s ease-in-out;
+}
+
+#hero .custom::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(-90deg, #D27685, #7D0633);
+}
+
+#hero .custom .uk-card {
+  flex: 0 0 290px;
+  height: 100%;
+  padding: 10px;
+  background: linear-gradient(45deg, #2D2727, #4D455D);
+  color: #FFF8F3;
+  border: 1px solid #FFF8F3;
+  border-radius: 5px;
+}
+
+#hero .description>* {
+  color: #FFF8F3 !important;
+}
