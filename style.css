@@ -18,7 +18,7 @@ body {
   left: 10%;
   width: 150px;
   height: 150px;
-  background: #FFF8F3;
+  background: linear-gradient(45deg, #FFF8F3, #E9A6A6, #D27685);
   border: 2px solid #2D2727;
   border-radius: 50%;
   animation: leftBubble 4s linear infinite;
