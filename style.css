@@ -6,12 +6,13 @@ body {
   background: linear-gradient(45deg, #2D2727, #4D455D, #E9A6A6, #D27685, #7D0633);
 }
 
-#hero .uk-section {
+#hero {
   position: relative;
+  margin: 0 80px;
 }
 
-#hero .uk-section::before,
-#hero .uk-section::after {
+#hero::before,
+#hero::after {
   content: '';
   position: absolute;
   bottom: -8%;
@@ -24,7 +25,7 @@ body {
   animation: leftBubble 4s linear infinite;
 }
 
-#hero .uk-section::after {
+#hero::after {
   top: -11%;
   right: -4%;
   left: unset;
@@ -82,8 +83,10 @@ body {
 #hero .custom {
   display: flex;
   min-height: 200px;
-  max-width: 50%;
+  /* max-width: 50%; */
   align-self: end;
+  flex-wrap: nowrap;
+  padding-left: unset;
   padding-bottom: 15px;
   overflow-x: scroll;
   gap: 20px;
@@ -121,6 +124,10 @@ body {
   color: #FFF8F3;
   border: 1px solid #FFF8F3;
   border-radius: 5px;
+}
+
+#hero .description {
+  padding: 0 40px;
 }
 
 #hero .description>* {
